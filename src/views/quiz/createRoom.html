@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green It - Criar Sala</title>
+  <link rel="stylesheet" href="/css/createRoom.css" />
+  <script defer src="/socket.io/socket.io.js"></script>
+  <script defer src="/js/quiz/createRoom.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <!-- Painel de configuração -->
+
+    <div id="configuracaoSala">
+      <h1>Configurar nova sala</h1>
+
+      <div class="itensConfiguracao">
+        <div class="select">
+          <div id="category-select">
+            <label for="options-view-button" style="color: #262626;">Tema</label>
+            <input type="checkbox" id="options-view-button">
+
+            <div id="select-button">
+              <div id="selected-value">Selecione o tema</div>
+
+              <div id="chevrons">
+                <i data-lucide="chevron-down"></i>
+                <i data-lucide="chevron-up"></i>
+              </div>
+            </div>
+          </div>
+          <ul id="options">
+            <li class="option">
+              <input type="radio" name="category" value="tecnologia-sustentavel" data-label="Tecnologia Sustentável">
+
+              <i data-lucide="laptop"></i>
+              <span class="label">Tecnologia Sustentável</span>
+              <i data-lucide="check"></i>
+            </li>
+            <li class="option">
+              <input type="radio" name="category" value="reciclagem" data-label="Reciclagem">
+
+              <i data-lucide="sprout"></i>
+              <span class="label">Reciclagem</span>
+              <i data-lucide="check"></i>
+            </li>
+          </ul>
+        </div>
+
+        <div class="select">
+          <div id="dificuldade-select">
+            <label for="dificuldade-toggle" style="color: #262626;">Dificuldade</label>
+            <input type="checkbox" id="dificuldade-toggle">
+
+            <div id="dificuldade-button">
+              <div id="dificuldade-value">Selecione a dificuldade</div>
+
+              <div id="dificuldade-chevrons">
+                <i data-lucide="chevron-down"></i>
+                <i data-lucide="chevron-up"></i>
+              </div>
+            </div>
+          </div>
+
+          <ul id="options-dificuldade">
+            <li class="option-dificuldade">
+              <input type="radio" name="dificuldade" value="facil" data-label="Fácil">
+              <i data-lucide="smile"></i>
+              <span class="label">Fácil</span>
+              <i data-lucide="check"></i>
+            </li>
+            <li class="option-dificuldade">
+              <input type="radio" name="dificuldade" value="medio" data-label="Médio">
+              <i data-lucide="meh"></i>
+              <span class="label">Médio</span>
+              <i data-lucide="check"></i>
+            </li>
+            <li class="option-dificuldade">
+              <input type="radio" name="dificuldade" value="dificil" data-label="Difícil">
+              <i data-lucide="frown"></i>
+              <span class="label">Difícil</span>
+              <i data-lucide="check"></i>
+            </li>
+          </ul>
+        </div>
+
+        <label for="tempo" class="tempo" style="color: #262626;">Tempo por pergunta (em segundos):</label>
+        <input type="number" id="tempo" min="10" max="300" value="30" />
+        <button class="create-button create-button--gooey" id="btnConfirmarCriacao">Criar Sala!<div
+            class="create-button__blobs">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </button>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur">
+              </feGaussianBlur>
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo">
+              </feColorMatrix>
+              <feBlend in="SourceGraphic" in2="goo"></feBlend>
+            </filter>
+          </defs>
+        </svg>
+        <button id="btnVoltar">VOLTAR</button>
+      </div>
+    </div>
+
+    <!-- Painel do administrador -->
+
+    <div id="painelAdmin" style="display: none; margin-top: 40px">
+      <h2 id="codigoSala"></h2>
+
+      <div>
+        <button id="iniciar">Iniciar Quiz</button>
+        <button id="pular" style="display: none">Pular Pergunta</button>
+        <button id="finalizarPartida">Finalizar Partida</button>
+      </div>
+
+      <div class="jogadoresConectados">
+        <h3>Jogadores conectados:</h3>
+        <ul id="lista-jogadores"></ul>
+      </div>
+
+      <div class="gerenciarJogadores">
+        <h3>Gerenciar jogadores</h3>
+        <ul id="listaGerenciarJogadores"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+</body>
+
+</html>

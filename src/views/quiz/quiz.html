@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz em andamento</title>
+    <link rel="stylesheet" href="/css/quiz.css" />
+    <script defer src="/js/quiz/enterRoom.js"></script>
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="/js/quiz/quiz.js"></script>
+  </head>
+  <body>
+    <div id="blocoPergunta">
+      <div class="container">
+        <h1 id="perguntaTitulo">Carregando pergunta...</h1>
+        <ul id="opcoes" class="lista-opcoes"></ul>
+        <div class="cronometro-box">
+          Tempo restante: <span id="cronometro">--</span>s
+        </div>
+      </div>
+    </div>
+
+    <div id="telaResultado" class="hidden">
+      <h2>Ranking final</h2>
+      <ol id="listaRanking"></ol>
+      <button onclick="voltarParaInicio()">Voltar para tela inicial</button>
+    </div>
+
+    <div id="telaContagem" class="hidden">
+      <div class="contador-circular">
+        <svg viewBox="0 0 100 100">
+          <circle class="trilha" cx="50" cy="50" r="45" />
+          <circle class="progresso" cx="50" cy="50" r="45" />
+        </svg>
+        <div class="contador-numero" id="contadorCircular">3</div>
+      </div>
+    </div>
+  </body>
+</html>

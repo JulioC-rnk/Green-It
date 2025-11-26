@@ -1,0 +1,879 @@
+/* ===================================================== */
+/* =============== RESET E VARIÁVEIS =================== */
+/* ===================================================== */
+
+/* Reset básico para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que padding e border são incluídos na largura/altura total */
+}
+
+/* Variáveis Globais de Cores e Efeitos */
+:root {
+  /* Cores principais */
+  --primary-color: #2ecc71; /* Verde primário */
+  --primary-dark: #27ae60; /* Verde mais escuro */
+  --secondary-color: #3498db; /* Azul secundário */
+  --text-color: #2c3e50; /* Cor padrão para texto */
+  --light-bg: #f8f9fa; /* Fundo claro */
+  --white: #ffffff; /* Branco puro */
+  --dark-gray: #262626; /* Cinza escuro para bordas */
+  --medium-gray: #888888; /* Cinza médio para bordas de conteúdo */
+  --light-gray: #e7e7e7; /* Cinza claro para fundos/linhas */
+
+  /* Cores específicas do tema Green IT */
+  --green-border-color: #0e7d70;
+  --green-light-gradient-start: #81d916;
+  --green-light-gradient-end: #3ab22c;
+  --green-dark-gradient-start: #059a5a;
+  --green-dark-gradient-end: #0e7d70;
+  /* Removendo --footer-background-color pois o original usa um hex direto */
+
+  /* Efeitos visuais */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra padrão */
+  --transition: all 0.3s ease; /* Transição suave para propriedades CSS */
+}
+
+/* =================== FONTES =================== */
+
+/* Importa as fontes do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100..900&family=Inter:wght@100..900&family=Sora:wght@100..800&display=swap");
+
+/* Estilo padrão para o corpo da página */
+body {
+  width: 100%;
+  font-family: "Inter", sans-serif; /* Define a fonte principal */
+  color: var(--text-color); /* Cor do texto padrão */
+  line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+  background-color: var(--white); /* Cor de fundo da página */
+  margin: 0; /* Remove margens padrão do body */
+}
+
+/* Links em geral */
+a {
+  text-decoration: none; /* Remove sublinhado padrão de links */
+  display: inline-block; /* Permite aplicar largura/altura e margens/padding */
+}
+
+
+/* ===================================================== */
+/* =================== HEADER ========================== */
+/* ===================================================== */
+.main-header {
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Container da Header */
+.container-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =================== NAVEGAÇÃO =================== */
+
+.main-nav {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 0 10px;
+  border: 2px solid #262626;
+  border-radius: 16px;
+  background-color: var(--white);
+}
+
+/* =================== LINKS DA NAV =================== */
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-link,
+.nav-link-active {
+  font-family: "InterB", sans-serif;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  width: 200px;
+  height: 45px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border-radius: 0.9em;
+}
+
+.nav-link {
+  font-weight: 600;
+  background-color: #4caf50;
+  color: white;
+  border: 3px solid #0e7d70;
+  box-shadow: 0 4px 0 #0e7d70;
+}
+
+.nav-link:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 0px 0 #0e7d70;
+}
+
+.nav-link-active {
+  border: 3px solid #4b4b4b;
+  background-color: #e7e7e7;
+  color: black;
+}
+
+/* =================== BOTÃO LOGIN =================== */
+
+.btn-login {
+  background: linear-gradient(to right, #81d916, #3ab22c);
+  font-family: "InterB", sans-serif;
+  font-weight: 600;
+  color: white;
+  padding: 0.35em 1.2em 0.35em 1.2em;
+  font-size: 14px;
+  border-radius: 0.9em;
+  border: 3px solid #0e7d70;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 0 #0e7d70;
+  overflow: hidden;
+  position: relative;
+  height: 45px;
+  width: 200px;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.btn-login .icon {
+  background: #f6f6f6;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 40px;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #059a5a;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.btn-login:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.btn-login .icon svg {
+  width: 1.1em;
+  color: #0e7d70;
+  transition: transform 0.3s;
+}
+
+.btn-login :active .icon {
+  transform: scale(0.95);
+}
+
+/* =================== BOTÃO GREEN IT (Logo Redondo) =================== */
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.greenit-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #0e7d70;
+  border-radius: 12px;
+  background-color: #e7e7e7;
+  box-shadow: 0px 4px 0px #0e7d70;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.greenit-button::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -150%;
+  width: 300%;
+  height: 300%;
+  border-radius: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 1;
+  background: linear-gradient(to right, #81d916, #3ab22c);
+}
+
+.greenit-button.claude::before {
+  background-color: #059a5a;
+}
+
+.greenit-button:hover::before {
+  transform: translateX(-50%) scale(1);
+}
+
+.greenit-button:hover {
+  transform: translate(-0px, -0px);
+  box-shadow: 0px 0px 0px #000000;
+}
+
+.greenit-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #000000;
+}
+
+/* Logo dentro do botão */
+.greenit-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  fill: #ffffff;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Animação da logo ao hover */
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.greenit-button:hover .greenit-logo {
+  animation: spin 5s linear infinite;
+  width: 1px;
+  height: 1px;
+  top: 28%;
+}
+
+.button-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  z-index: 2;
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.button-text span:first-child {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.button-text span:last-child {
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+}
+
+.greenit-button:hover .button-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ===================================================== */
+/* ==================== LAYOUT GERAL =================== */
+/* ===================================================== */
+
+/* Wrapper para o conteúdo principal */
+.wrapper {
+  max-width: 100vw;
+  overflow-x: hidden; /* Evita scroll horizontal indesejado */
+  display: flex; /* Adiciona flexbox para organizar os filhos */
+  flex-direction: column; /* Coloca os filhos em coluna */
+}
+
+/* Contêiner principal com borda e centralização */
+.borderscreen {
+  max-width: 1400px; /* Largura máxima */
+  width: 90%; /* Largura responsiva */
+  margin: 7.6% auto 0; /* Ajusta margem inferior para 0 para encaixar com a onda */
+  display: flex; /* Usa flexbox para layout */
+  justify-content: center;
+  align-items: flex-start; /* Alinha itens ao topo */
+  gap: 20px; /* Espaçamento entre os elementos (main e aside) */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 15px; /* Cantos arredondados */
+  border: 2px solid var(--dark-gray); /* Borda escura */
+  box-shadow: var(--shadow); /* Sombra */
+}
+
+/* Contêiner 'master' que envolve main e aside */
+.master {
+  width: 100%;
+  display: flex; /* Usa flexbox */
+  flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px; /* Espaçamento entre main e aside dentro do master */
+  border-radius: 20px;
+  background: linear-gradient(169.81deg, var(--primary-color) 10%, var(--primary-dark) 100%); /* Gradiente verde */
+  padding: 20px; /* Padding interno */
+}
+
+/* Estilo para a seção de últimas notícias (main) */
+main {
+  flex: 3; /* Ocupa mais espaço em telas maiores */
+  min-width: 300px; /* Largura mínima para main */
+  max-width: 70%; /* Limita a largura para melhor visualização */
+  padding: 10px; /* Espaçamento interno */
+  background-color: var(--white); /* Fundo branco */
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: var(--shadow); /* Sombra */
+}
+
+.lastnews {
+  padding: 10px; /* Espaçamento interno */
+}
+
+.last {
+  background: var(--light-gray); /* Fundo cinza claro para o cabeçalho "Últimas Notícias" */
+  color: var(--dark-gray);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Contêiner dinâmico para as últimas notícias (populado pelo JS) */
+#lastNewsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaçamento entre as notícias */
+  padding: 10px;
+}
+
+/* Estilo para cada item de notícia individual */
+.news {
+  display: flex;
+  flex-direction: row; /* Layout horizontal de imagem e texto */
+  gap: 15px;
+  align-items: flex-start; /* Alinha itens ao topo */
+  background: var(--white); /* Fundo branco para cada notícia */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.news .img {
+  flex-shrink: 0; /* Previne que a imagem diminua */
+  width: 150px; /* Largura fixa da imagem */
+  height: 100px; /* Altura fixa da imagem */
+  border-radius: 5px; /* Cantos arredondados para a imagem */
+  overflow: hidden; /* Garante que a imagem não vaze */
+}
+
+.news .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cobre o espaço sem distorcer */
+  display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+.news .text {
+  flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+}
+
+.news .title {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.news .title a {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.news .title a:hover {
+  color: var(--primary-dark); /* Muda a cor no hover */
+  text-decoration: underline; /* Adiciona sublinhado no hover */
+}
+
+.news .content {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9em;
+  color: var(--text-color);
+  line-height: 1.4;
+  border: 1px solid var(--medium-gray); /* Borda para o texto de descrição */
+  border-radius: 5px;
+  padding: 8px;
+}
+
+hr {
+  width: 98%; /* Largura da linha */
+  height: 2px; /* Espessura da linha */
+  background: var(--light-gray); /* Cor da linha */
+  border: none; /* Remove borda padrão */
+  margin: 15px auto; /* Centraliza e adiciona margem */
+}
+
+
+/* Estilo para a seção de notícias em alta (aside) */
+aside {
+  flex: 1; /* Ocupa menos espaço em telas maiores */
+  min-width: 280px; /* Largura mínima para aside */
+  max-width: 350px; /* Largura máxima para aside */
+  position: relative; /* Para posicionar o pseudo-elemento ::before */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  border-radius: 15px;
+  background: linear-gradient(180deg, var(--green-dark-gradient-start) 0%, var(--green-dark-gradient-end) 100%); /* Gradiente escuro */
+  overflow: hidden; /* Esconde o fundo que vaza */
+  z-index: 1;
+  padding: 20px 10px; /* Espaçamento interno */
+  box-shadow: var(--shadow); /* Sombra */
+}
+
+/* Padrão de fundo para a seção de notícias em alta */
+aside::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/contact/xo.png") repeat; /* Padrão de fundo */
+  background-size: 380px; /* Tamanho do padrão */
+  background-position: 15px 47px; /* Posição do padrão */
+  opacity: 0.35; /* Transparência do padrão */
+  z-index: 0; /* Fica por trás do conteúdo */
+  border-radius: 15px;
+}
+
+aside > * {
+  position: relative;
+  z-index: 2; /* Garante que o conteúdo fique acima do padrão de fundo */
+}
+
+.titlen {
+  color: var(--white); /* Cor do título "Notícias em alta" */
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+}
+
+/* Contêiner dinâmico para as notícias em alta (populado pelo JS) */
+#trendingNewsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaçamento entre as notícias em alta */
+  width: 100%;
+  padding: 0 10px;
+}
+
+/* Estilo para cada item de notícia em alta */
+.trendn {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: row; /* Layout horizontal de imagem e título */
+  gap: 10px;
+  align-items: center;
+  background-color: var(--white); /* Fundo branco */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  width: 100%; /* Ocupa a largura total do contêiner */
+}
+
+.trendn .img {
+  flex-shrink: 0;
+  width: 80px; /* Largura da imagem */
+  height: 60px; /* Altura da imagem */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.trendn .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.trendn .title {
+  flex-grow: 1;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.trendn .title h5 {
+  color: var(--text-color);
+  font-size: 0.9em;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  margin: 0; /* Remove margens padrão do h5 */
+}
+
+.trendn .title a {
+  color: inherit; /* Herda a cor do h5 */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.trendn .title a:hover {
+  color: var(--primary-dark); /* Muda a cor no hover */
+  text-decoration: underline;
+}
+
+.sideline {
+  width: 90%; /* Largura da linha divisória */
+  height: 2px; /* Espessura da linha */
+  background: var(--light-gray); /* Cor da linha */
+  border: none;
+  margin: 10px auto; /* Centraliza e adiciona margem */
+}
+
+
+/* ===================================================== */
+/* ==================== RODAPÉ (FOOTER) ================== */
+/* ===================================================== */
+
+/* O 'bluecolor' no CSS original parece ser o que define a onda no rodapé. */
+/* Para que ele fique "igual ao futter desse arquivo", vamos restaurar as regras. */
+.greenfooter {
+  /* Restaura o padding e a largura 100% que estava no arquivo CSS anterior */
+  width: 100%;
+  height: auto; /* Deixa a altura se ajustar ao conteúdo */
+}
+
+.bluecolor {
+  /* Restaura as propriedades originais do seu CSS para a imagem Vector2.svg */
+  background: var(--white); /* Fundo branco para a área da onda */
+  width: 100%;
+  height: 60%; /* Altura percentual da imagem, ajuste se necessário */
+  margin-top: -100px; /* Margem negativa para sobreposição */
+  /* Propriedades extras para garantir que preencha a tela */
+  display: block; /* Garante que a imagem se comporte como um bloco */
+  object-fit: cover; /* Faz a imagem cobrir o espaço disponível sem distorcer */
+}
+
+.green-footer {
+  margin-top: 6%; /* A margem original do footer */
+  background-color: #3ab22c; /* Cor original do rodapé */
+  color: white;
+  font-family: "Inter";
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.footer-cta {
+  text-align: center;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer-cta h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-col h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #81c784;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col li {
+  margin-bottom: 0.8rem;
+  color: #c8e6c9;
+  transition: all 0.3s ease;
+}
+
+.footer-col li:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 2rem 0 0;
+  margin-top: 2rem;
+  border-top: 1px solid #81c784;
+}
+
+.footer-bottom h3 {
+  font-style: italic;
+  font-size: 1.8rem;
+  color: white;
+}
+
+
+/* ===================================================== */
+/* ==================== RESPONSIVIDADE ================= */
+/* ===================================================== */
+
+@media (max-width: 1200px) {
+  .borderscreen {
+    width: 95%; /* Aumenta a largura em telas menores */
+    margin-top: 5%;
+  }
+
+  .master {
+    flex-direction: column; /* Coloca main e aside em coluna */
+    align-items: center; /* Centraliza na coluna */
+  }
+
+  main, aside {
+    max-width: 95%; /* Ocupa quase toda a largura disponível */
+  }
+
+  .last {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 900px) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+  }
+
+  .main-header {
+    position: static; /* Remove sticky em telas muito pequenas */
+    width: 95%;
+    margin: 20px auto; /* Centraliza */
+    padding: 15px 0;
+  }
+
+  .main-nav {
+    padding: 0;
+  }
+
+  .nav-list {
+    flex-direction: column; /* Itens de navegação em coluna */
+    width: 95%;
+    gap: 10px;
+    padding: 10px 0; /* Ajusta padding */
+  }
+
+  .nav-link, .nav-link-active, .btn-login {
+    width: 90%; /* Largura maior para botões em mobile */
+    max-width: 300px; /* Limita largura máxima */
+    padding: 0.8em; /* Aumenta padding para toque */
+    height: auto; /* Altura flexível */
+  }
+
+  .btn-login .icon {
+    width: 30px;
+    height: 25px;
+  }
+
+  .borderscreen {
+    /* Ajustado para mobile para acomodar o rodapé */
+    margin: 5% auto 0; /* Ajusta margem inferior para 0 */
+    flex-direction: column; /* Continua em coluna */
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .master {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  main {
+    padding: 0; /* Remove padding extra */
+  }
+
+  .last {
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  #lastNewsContainer {
+    padding: 5px; /* Reduz padding */
+  }
+
+  .news {
+    flex-direction: column; /* Imagem e texto em coluna para cada notícia */
+    align-items: center; /* Centraliza os itens */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .news .img {
+    width: 90%; /* Largura da imagem em mobile */
+    height: auto; /* Altura automática para manter proporção */
+    max-width: 300px; /* Limita largura máxima */
+  }
+
+  .news .text {
+    width: 90%; /* Largura do texto em mobile */
+    text-align: center; /* Centraliza texto */
+  }
+
+  .news .content {
+    height: auto; /* Altura flexível para o conteúdo */
+    word-break: break-word; /* Quebra palavras longas */
+  }
+
+  hr {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  aside {
+    width: 95%; /* Largura da seção de notícias em alta */
+    margin: 10px auto; /* Centraliza */
+    padding: 15px;
+    height: auto; /* Altura flexível */
+  }
+
+  aside::before {
+    background-size: 100%; /* Ajusta o tamanho do padrão de fundo */
+    background-position: center; /* Centraliza o padrão */
+  }
+
+  #trendingNewsContainer {
+    padding: 0;
+  }
+
+  .trendn {
+    flex-direction: column; /* Imagem e título em coluna */
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .trendn .img {
+    width: 80%; /* Largura da imagem em notícias em alta */
+    height: auto;
+    max-width: 150px;
+  }
+
+  .trendn .title {
+    width: 90%; /* Largura do título */
+    text-align: center;
+  }
+
+  .trendn .title h5 {
+    font-size: 0.9em; /* Ajusta tamanho da fonte */
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
+  .sideline {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr; /* Colunas do rodapé em uma única coluna */
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-col h3 {
+    margin-bottom: 0.8rem; /* Reduz margem */
+  }
+  .footer-col li {
+    padding-left: 0; /* Remove padding no hover em mobile */
+  }
+}
+
+/* Para telas muito pequenas (ex: 320px de largura) */
+@media (max-width: 480px) {
+  .nav-list {
+    gap: 8px;
+  }
+
+  .nav-link, .nav-link-active, .btn-login {
+    font-size: 13px;
+    padding: 0.6em;
+  }
+
+  .btn-login .icon {
+    width: 30px;
+    height: 25px;
+  }
+
+  .news .title {
+    font-size: 1em;
+  }
+
+  .news .content {
+    font-size: 0.85em;
+  }
+
+  .trendn .title h5 {
+    font-size: 0.8em;
+  }
+
+  .footer-col h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer-col li {
+    font-size: 0.9em;
+  }
+}

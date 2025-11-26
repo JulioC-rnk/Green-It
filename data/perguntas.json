@@ -1,0 +1,294 @@
+{
+  "tecnologia-sustentavel": [
+    {
+      "pergunta": "O que significa tecnologia sustentável?",
+      "opcoes": ["Usar apenas computadores caros", "Utilizar a tecnologia de forma a economizar recursos e proteger o meio ambiente", "Jogar celulares velhos no lixo comum", "Comprar o último modelo de smartphone todos os anos"],
+      "correta": 1,
+      "dificuldade": "facil"
+    },
+    {
+      "pergunta": "Qual dessas ações é mais sustentável?",
+      "opcoes": ["Trocar de celular todos os anos", "Doar ou consertar eletrônicos velhos em vez de jogar fora", "Deixar o computador ligado a noite toda", "Usar apenas dispositivos novos para evitar problemas"],
+      "correta": 1,
+      "dificuldade": "facil"
+    },
+    {
+      "pergunta": "Qual aparelho gasta menos energia?",
+      "opcoes": ["Computador de mesa (desktop) grande", "TV antiga de tubo", "Notebook", "Video game ligado o dia todo"],
+      "correta": 2,
+      "dificuldade": "facil"
+    },
+    {
+      "pergunta": "O que fazer com pilhas e baterias usadas?",
+      "opcoes": ["Jogar no lixo comum", "Guardar em um pote em casa para sempre", "Queimar no quintal", "Levar a pontos de coleta especializados"],
+      "correta": 3,
+      "dificuldade": "facil"
+    },
+    {
+      "pergunta": "Qual hábito NÃO ajuda o planeta?",
+      "opcoes": ["Imprimir todos os e-mails e documentos", "Usar a internet para enviar mensagens em vez de papel", "Configurar o computador para desligar a tela quando não estiver em uso", "Usar tablets para ler livros em vez de papel"],
+      "correta": 0,
+      "dificuldade": "facil"
+    },
+    {
+      "pergunta": "Por que é importante reciclar eletrônicos?",
+      "opcoes": ["Porque eles viram brinquedos novos", "Porque é mais fácil do que consertar", "Porque metais como ouro e cobre podem ser reaproveitados", "Porque ocupam pouco espaço no lixo"],
+      "correta": 2,
+      "dificuldade": "facil"
+    },
+    {
+      "pergunta": "Qual desses é um exemplo de lixo eletrônico?",
+      "opcoes": ["Garrafa pet", "Computador quebrado", "Casca de banana", "Livro velho"],
+      "correta": 1,
+      "dificuldade": "facil"
+    },
+    {
+      "pergunta": "Como empresas podem ser mais sustentáveis com tecnologia?",
+      "opcoes": ["Usando servidores que gastam muita energia", "Trocando todos os equipamentos todo ano", "Virtualizando serviços (usando menos máquinas físicas)", "Imprimindo todos os documentos para arquivo"],
+      "correta": 2,
+      "dificuldade": "facil"
+    },
+    {
+      "pergunta": "O que é economia circular em relação à tecnologia sustentável?",
+      "opcoes": ["Um modelo de produção que incentiva o descarte rápido de produtos", "Um sistema que prioriza o reaproveitamento e reciclagem de materiais", "Uma técnica de gerar energia apenas com carvão", "Uma forma de reduzir o uso da internet"],
+      "correta": 1,
+      "dificuldade": "medio"
+    },
+    {
+      "pergunta": "Qual dessas opções é um benefício direto do uso de energia solar fotovoltaica?",
+      "opcoes": ["Aumento da poluição do ar", "Geração de energia limpa e renovável", "Maior dependência de combustíveis fósseis", "Consumo elevado de água durante a geração"],
+      "correta": 1,
+      "dificuldade": "medio"
+    },
+    {
+      "pergunta": "Como a Internet das Coisas (IoT) pode ajudar na sustentabilidade das cidades?",
+      "opcoes": ["Aumentando o uso de energia elétrica", "Melhorando o monitoramento de consumo de água e energia", "Tornando os dispositivos mais descartáveis", "Aumentando o uso de papel nas empresas"],
+      "correta": 1,
+      "dificuldade": "medio"
+    },
+    {
+      "pergunta": "O que caracteriza um edifício considerado sustentável (green building)?",
+      "opcoes": ["Utilização de materiais reciclados e eficiência no uso de energia", "Paredes pintadas de verde", "Apenas o uso de energia elétrica comum", "Falta de ventilação natural"],
+      "correta": 0,
+      "dificuldade": "medio"
+    },
+    {
+      "pergunta": "Qual dos seguintes desafios é mais comum na produção de carros elétricos sustentáveis?",
+      "opcoes": ["Baixo custo de produção", "Reciclagem de baterias de lítio", "Alto índice de emissão de gases poluentes", "Maior consumo de combustíveis fósseis"],
+      "correta": 1,
+      "dificuldade": "medio"
+    },
+    {
+      "pergunta": "Como a automação residencial pode contribuir para a eficiência energética?",
+      "opcoes": ["Mantendo os aparelhos ligados o tempo todo", "Programando o desligamento automático de luzes e equipamentos", "Aumentando o consumo de energia para manter a casa aquecida", "Deixando as luzes acesas durante o dia"],
+      "correta": 1,
+      "dificuldade": "medio"
+    },
+    {
+      "pergunta": "Qual tecnologia abaixo ajuda a reduzir o desperdício de água em ambientes urbanos?",
+      "opcoes": ["Sensores de umidade para irrigação inteligente", "Luzes de LED", "Energia eólica", "Baterias de chumbo-ácido"],
+      "correta": 0,
+      "dificuldade": "medio"
+    },
+    {
+      "pergunta": "Por que é importante considerar o ciclo de vida de um produto tecnológico?",
+      "opcoes": ["Para aumentar o consumo de novos produtos", "Para planejar o descarte e a reciclagem adequados", "Para incentivar o uso de combustíveis fósseis", "Para reduzir o tempo de uso dos dispositivos"],
+      "correta": 1,
+      "dificuldade": "medio"
+    },
+    {
+      "pergunta": "Qual é o principal desafio ambiental associado à produção de painéis solares fotovoltaicos em larga escala?",
+      "opcoes": ["Baixa eficiência energética", "Emissão de CO2 durante a operação", "Uso de metais pesados e geração de resíduos tóxicos no processo de fabricação", "Necessidade de combustíveis fósseis para o funcionamento"],
+      "correta": 2,
+      "dificuldade": "dificil"
+    },
+    {
+      "pergunta": "Como as tecnologias de captura e armazenamento de carbono (CCS) contribuem para a sustentabilidade?",
+      "opcoes": ["Aumentando a emissão de metano", "Capturando CO2 antes que ele seja liberado na atmosfera", "Eliminando a necessidade de energias renováveis", "Produzindo mais carvão para geração de energia"],
+      "correta": 1,
+      "dificuldade": "dificil"
+    },
+    {
+      "pergunta": "O que é a tecnologia de microrrede (microgrid) e como ela favorece a sustentabilidade energética?",
+      "opcoes": ["Uma rede de distribuição exclusiva para grandes indústrias", "Uma rede de pequeno porte que permite o uso local de fontes renováveis com maior autonomia", "Uma rede de alta tensão dedicada a zonas urbanas", "Uma conexão direta com usinas termoelétricas"],
+      "correta": 1,
+      "dificuldade": "dificil"
+    },
+    {
+      "pergunta": "Qual dessas tecnologias emergentes tem maior potencial de reduzir o consumo de energia em data centers?",
+      "opcoes": ["Armazenamento em fita magnética", "Refrigeração líquida por imersão", "Aumento de servidores físicos", "Uso de discos rígidos tradicionais"],
+      "correta": 1,
+      "dificuldade": "dificil"
+    },
+    {
+      "pergunta": "Por que o conceito de 'pegada de carbono digital' vem ganhando atenção na área de tecnologia sustentável?",
+      "opcoes": ["Porque o uso de serviços digitais não consome energia", "Porque o tráfego de dados e os serviços em nuvem geram grandes demandas energéticas e emissões indiretas", "Porque dispositivos móveis não têm impacto ambiental", "Porque as redes sociais ajudam a plantar árvores"],
+      "correta": 1,
+      "dificuldade": "dificil"
+    },
+    {
+      "pergunta": "Qual das seguintes opções descreve melhor o conceito de mineração urbana (urban mining)?",
+      "opcoes": ["A extração de minérios de áreas urbanas não exploradas", "O reaproveitamento de materiais valiosos presentes em resíduos eletrônicos urbanos", "A utilização de espaços urbanos para mineração de carvão", "A instalação de minas subterrâneas em áreas metropolitanas"],
+      "correta": 1,
+      "dificuldade": "dificil"
+    },
+    {
+      "pergunta": "Na produção de baterias sustentáveis, qual elemento químico está sendo estudado como alternativa ao lítio devido ao menor impacto ambiental?",
+      "opcoes": ["Cobalto", "Níquel", "Sódio", "Chumbo"],
+      "correta": 2,
+      "dificuldade": "dificil"
+    },
+    {
+      "pergunta": "Qual o papel da inteligência artificial na gestão de redes elétricas sustentáveis (smart grids)?",
+      "opcoes": ["Aumentar o consumo de energia das residências", "Permitir o desligamento de fontes renováveis em horários de pico", "Otimizar o balanceamento da oferta e demanda de energia em tempo real", "Substituir totalmente os trabalhadores do setor elétrico"],
+      "correta": 2,
+      "dificuldade": "dificil"
+    }
+  ],
+  "reciclagem": [
+    {
+      "pergunta": "O que é reciclagem?",
+      "opcoes": ["Jogar o lixo em qualquer lugar", "Transformar materiais usados em novos produtos", "Queimar o lixo no quintal", "Guardar o lixo em casa indefinidamente"],
+      "correta": 1,
+      "dificuldade": "facil"
+    },
+    {
+      "pergunta": "Qual desses materiais pode ser reciclado com mais facilidade?",
+      "opcoes": ["Plástico", "Comida estragada", "Papel e papelão", "Restos de comida"],
+      "correta": 2,
+      "dificuldade": "facil"
+    },
+    {
+      "pergunta": "O que devemos fazer com garrafas plásticas usadas?",
+      "opcoes": ["Jogar no lixo comum", "Levar para a coleta seletiva", "Enterrar no quintal", "Quebrar em pedaços e jogar fora"],
+      "correta": 1,
+      "dificuldade": "facil"
+    },
+    {
+      "pergunta": "Qual cor da lixeira geralmente é usada para reciclagem de papel?",
+      "opcoes": ["Azul", "Amarelo", "Verde", "Vermelho"],
+      "correta": 0,
+      "dificuldade": "facil"
+    },
+    {
+      "pergunta": "Por que é importante separar o lixo reciclável do lixo comum?",
+      "opcoes": ["Para ocupar mais espaço em casa", "Para facilitar o reaproveitamento dos materiais e reduzir a poluição", "Porque é mais bonito", "Para misturar tudo depois"],
+      "correta": 1,
+      "dificuldade": "facil"
+    },
+    {
+      "pergunta": "Qual desses objetos é considerado lixo eletrônico?",
+      "opcoes": ["Garrafa de vidro", "Celular antigo", "Caixa de papelão", "Papel usado"],
+      "correta": 1,
+      "dificuldade": "facil"
+    },
+    {
+      "pergunta": "O que podemos fazer com latinhas de alumínio usadas?",
+      "opcoes": ["Jogar fora", "Guardar sem uso", "Reciclar e transformar em novos produtos", "Enterrar no solo"],
+      "correta": 2,
+      "dificuldade": "facil"
+    },
+    {
+      "pergunta": "O que significa coleta seletiva?",
+      "opcoes": ["Misturar todos os tipos de lixo", "Separar os resíduos de acordo com o tipo de material", "Jogar lixo em terrenos baldios", "Queimar o lixo para reduzir o volume"],
+      "correta": 1,
+      "dificuldade": "facil"
+    },
+    {
+      "pergunta": "O que é a logística reversa dentro do processo de reciclagem?",
+      "opcoes": ["Um sistema que devolve os produtos reciclados para o consumidor", "Um método de transporte de lixo comum para aterros sanitários", "Um processo em que fabricantes recolhem produtos pós-consumo para reaproveitamento", "Uma técnica para enterrar resíduos recicláveis"],
+      "correta": 2,
+      "dificuldade": "medio"
+    },
+    {
+      "pergunta": "Por que é importante limpar embalagens antes de enviá-las para a reciclagem?",
+      "opcoes": ["Para aumentar o peso do material", "Para evitar contaminação que pode inviabilizar a reciclagem", "Para melhorar o cheiro durante o transporte", "Porque os recicladores só aceitam embalagens perfumadas"],
+      "correta": 1,
+      "dificuldade": "medio"
+    },
+    {
+      "pergunta": "Qual dessas ações melhora o processo de reciclagem do vidro?",
+      "opcoes": ["Misturar com outros tipos de lixo", "Quebrar em pedaços muito pequenos antes de descartar", "Separar por cores antes do descarte", "Lavar com produtos químicos fortes antes de reciclar"],
+      "correta": 2,
+      "dificuldade": "medio"
+    },
+    {
+      "pergunta": "O que é o 'downcycling' na reciclagem?",
+      "opcoes": ["Processo que transforma materiais reciclados em produtos de menor qualidade", "Reciclagem de materiais orgânicos", "Transformação de plástico em metal", "Método de reciclagem que não gera resíduos"],
+      "correta": 0,
+      "dificuldade": "medio"
+    },
+    {
+      "pergunta": "Qual dos seguintes materiais pode ser reciclado, mas possui um processo mais complexo e custoso?",
+      "opcoes": ["Papel", "Alumínio", "Plástico tipo PVC", "Vidro"],
+      "correta": 2,
+      "dificuldade": "medio"
+    },
+    {
+      "pergunta": "Por que o descarte incorreto de lixo eletrônico é preocupante para o meio ambiente?",
+      "opcoes": ["Porque ocupa muito espaço nos aterros", "Porque contém substâncias tóxicas que podem contaminar o solo e a água", "Porque pode gerar mau cheiro nas cidades", "Porque os componentes eletrônicos enferrujam rapidamente"],
+      "correta": 1,
+      "dificuldade": "medio"
+    },
+    {
+      "pergunta": "Qual alternativa abaixo é uma prática de reciclagem de resíduos orgânicos?",
+      "opcoes": ["Incinerar os resíduos", "Levar para aterros comuns", "Produzir adubo através da compostagem", "Misturar com plásticos recicláveis"],
+      "correta": 2,
+      "dificuldade": "medio"
+    },
+    {
+      "pergunta": "O que são os Pontos de Entrega Voluntária (PEVs) na reciclagem?",
+      "opcoes": ["Locais para descarte de lixo hospitalar", "Espaços públicos para a população depositar materiais recicláveis", "Centros de triagem de lixo eletrônico apenas", "Lixeiras comuns espalhadas pelas ruas"],
+      "correta": 1,
+      "dificuldade": "medio"
+    },
+    {
+      "pergunta": "Qual é o maior desafio no processo de reciclagem de plásticos multicamadas, como embalagens de salgadinhos?",
+      "opcoes": ["Falta de consumidores para os produtos reciclados", "Baixo custo de reciclagem", "Dificuldade na separação de diferentes tipos de materiais na mesma embalagem", "Alta demanda por reciclagem desse tipo de plástico"],
+      "correta": 2,
+      "dificuldade": "dificil"
+    },
+    {
+      "pergunta": "O que é a reciclagem química de plásticos?",
+      "opcoes": ["Processo de derretimento simples", "Transformação dos polímeros plásticos em suas matérias-primas químicas originais", "Trituramento mecânico dos resíduos", "Processo exclusivo para reciclar vidro"],
+      "correta": 1,
+      "dificuldade": "dificil"
+    },
+    {
+      "pergunta": "Por que o alumínio é considerado um dos materiais mais vantajosos para reciclagem?",
+      "opcoes": ["Porque é reciclado apenas uma vez", "Porque perde qualidade a cada reciclagem", "Porque pode ser reciclado infinitamente sem perder suas propriedades", "Porque é o material mais leve existente"],
+      "correta": 2,
+      "dificuldade": "dificil"
+    },
+    {
+      "pergunta": "O que significa o termo 'economia circular' quando falamos de reciclagem?",
+      "opcoes": ["Produzir mais lixo para aumentar a reciclagem", "Manter os materiais em uso pelo maior tempo possível, reutilizando e reciclando", "Aumentar o consumo de produtos descartáveis", "Enviar todos os resíduos para aterros sanitários"],
+      "correta": 1,
+      "dificuldade": "dificil"
+    },
+    {
+      "pergunta": "Qual destes impactos negativos pode ocorrer com a reciclagem inadequada de resíduos eletrônicos?",
+      "opcoes": ["Aumento da biodiversidade local", "Contaminação por metais pesados como chumbo e mercúrio", "Redução do consumo de água", "Aumento da qualidade do solo"],
+      "correta": 1,
+      "dificuldade": "dificil"
+    },
+    {
+      "pergunta": "Qual é o papel dos catadores de materiais recicláveis na gestão de resíduos urbanos no Brasil?",
+      "opcoes": ["Apenas transportar o lixo até os aterros", "Atuar na coleta e separação de materiais recicláveis, sendo responsáveis por grande parte da reciclagem no país", "Supervisionar os caminhões de lixo", "Queimar os resíduos recicláveis para gerar energia"],
+      "correta": 1,
+      "dificuldade": "dificil"
+    },
+    {
+      "pergunta": "Por que a reciclagem de vidro é considerada energeticamente vantajosa em relação à produção de vidro novo?",
+      "opcoes": ["Porque o vidro reciclado derrete a temperaturas mais baixas", "Porque o vidro reciclado precisa de mais energia que o vidro novo", "Porque o vidro não pode ser reciclado", "Porque o vidro reciclado não necessita de nenhuma etapa de aquecimento"],
+      "correta": 0,
+      "dificuldade": "dificil"
+    },
+    {
+      "pergunta": "O que são resíduos pós-consumo na indústria da reciclagem?",
+      "opcoes": ["Resíduos gerados durante o processo de fabricação", "Produtos descartados pelos consumidores finais após o uso", "Material orgânico descartado por restaurantes", "Resíduos industriais perigosos"],
+      "correta": 1,
+      "dificuldade": "dificil"
+    }
+  ]
+}

@@ -1,0 +1,1678 @@
+/* ===================================================== */
+/* =============== RESET E VARIÁVEIS =================== */
+/* ===================================================== */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis Globais */
+:root {
+  /* Cores */
+  --primary-color: #2ecc71;
+  --primary-dark: #27ae60;
+  --secondary-color: #3498db;
+  --text-color: #262626;
+  --light-bg: #f8f9fa;
+  --white: #ffffff;
+
+  /* Efeitos */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* =================== FONTES =================== */
+
+/* Fonte Inter */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap");
+
+/* Fonte be vietnam pro */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap");
+
+/* Fonte sora */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..900&display=swap");
+
+body {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--white);
+}
+
+/* ===================================================== */
+/* =================== HEADER ========================== */
+/* ===================================================== */
+.main-header {
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Container da Header */
+.container-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =================== NAVEGAÇÃO =================== */
+
+.main-nav {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 0 10px;
+  border: 2px solid #262626;
+  border-radius: 16px;
+  background-color: var(--white);
+}
+
+/* =================== LINKS DA NAV =================== */
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-link,
+.nav-link-active {
+  font-family: "InterB", sans-serif;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  width: 200px;
+  height: 45px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border-radius: 0.9em;
+}
+
+.nav-link {
+  font-weight: 600;
+  background-color: #4caf50;
+  color: white;
+  border: 3px solid #0e7d70;
+  box-shadow: 0 4px 0 #0e7d70;
+}
+
+.nav-link:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 0px 0 #0e7d70;
+}
+
+.nav-link-active {
+  border: 3px solid #4b4b4b;
+  background-color: #e7e7e7;
+  color: black;
+}
+
+/* =================== BOTÃO LOGIN =================== */
+
+.btn-login {
+  background: linear-gradient(to right, #81d916, #3ab22c);
+  font-family: "InterB", sans-serif;
+  font-weight: 600;
+  color: white;
+  padding: 0.35em 1.2em 0.35em 1.2em;
+  font-size: 14px;
+  border-radius: 0.9em;
+  border: 3px solid #0e7d70;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 0 #0e7d70;
+  overflow: hidden;
+  position: relative;
+  height: 45px;
+  width: 200px;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.btn-login .icon {
+  background: #f6f6f6;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 40px;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #059a5a;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.btn-login:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.btn-login .icon svg {
+  width: 1.1em;
+  color: #0e7d70;
+  transition: transform 0.3s;
+}
+
+.btn-login :active .icon {
+  transform: scale(0.95);
+}
+
+/* =================== BOTÃO GREEN IT (Logo Redondo) =================== */
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.greenit-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #0e7d70;
+  border-radius: 12px;
+  background-color: #e7e7e7;
+  box-shadow: 0px 4px 0px #0e7d70;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.greenit-button::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -150%;
+  width: 300%;
+  height: 300%;
+  border-radius: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 1;
+  background: linear-gradient(to right, #81d916, #3ab22c);
+}
+
+.greenit-button.claude::before {
+  background-color: #059a5a;
+}
+
+.greenit-button:hover::before {
+  transform: translateX(-50%) scale(1);
+}
+
+.greenit-button:hover {
+  transform: translate(-0px, -0px);
+  box-shadow: 0px 0px 0px #000000;
+}
+
+.greenit-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #000000;
+}
+
+/* Logo dentro do botão */
+.greenit-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  fill: #ffffff;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Animação da logo ao hover */
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.greenit-button:hover .greenit-logo {
+  animation: spin 5s linear infinite;
+  width: 1px;
+  height: 1px;
+  top: 28%;
+}
+
+.button-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  z-index: 2;
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.button-text span:first-child {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.button-text span:last-child {
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+}
+
+.greenit-button:hover .button-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================================================== */
+/* =================== MAIN SECTION ==================== */
+/* ===================================================== */
+.main-section {
+  padding: 6rem 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+  position: relative;
+}
+
+/* Container padrão centralizado */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Conteúdo principal (Texto + Imagem) */
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+/* Texto da seção */
+.main-text {
+  flex: 1;
+  padding: 2rem 0;
+  padding-left: 30px;
+  padding-right: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  justify-content: center;
+}
+
+.main-text h1 {
+  font-size: 2.8rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.main-text p {
+  font-family: "Inter";
+  font-weight: 800;
+  text-align: left;
+  position: relative;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: var(--text-color);
+  max-width: 90%;
+}
+
+/* Imagem principal */
+.main-image {
+  flex: 1;
+  position: relative;
+  text-align: center;
+  max-width: 50%;
+}
+
+.main-image img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  transition: transform 0.3s ease;
+}
+
+.main-image img:hover {
+  transform: translateY(-5px);
+}
+
+/* =================== BOTÕES DA SEÇÃO MAIN =================== */
+
+.main-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  min-width: 280px;
+  transition: all 0.3s ease;
+  font-family: "BeVietnamPro", sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  width: 400px;
+  height: 60px;
+}
+
+.btn-participate {
+  background-color: #f8ba37;
+  color: #000000;
+  box-shadow: 0 3px 0px #262626;
+  border: 2px solid #262626;
+}
+
+.btn-create {
+  background: linear-gradient(to right, #ff4b4b, #f12a80);
+  color: white;
+  box-shadow: 0 3px 0px #262626;
+  border: 2px solid #262626;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  border: 2px solid #262626;
+  box-shadow: 0 0px 0px #262626;
+}
+
+/* ===================================================== */
+/* =================== SEÇÃO PERFIS ==================== */
+/* ===================================================== */
+.profiles {
+  padding: 4rem 0;
+  background-color: #E7E7E7;
+  border-radius: 15px;
+  max-width: 2000px;
+  position: relative;
+  gap: 40px;
+  display: flex;
+}
+
+.profile-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.profile-card {
+  font-family: "InterB";
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  text-align: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  background-color: white;
+  border-radius: 12px;
+  width: 300px;
+  padding: 10px;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+}
+
+.profile-card h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 1rem;
+  min-height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Cores personalizadas por tipo de perfil */
+.profile-student { color: #f97f04; }
+.profile-teacher { color: #f12a80; }
+.profile-responsibly { color: #ff4b4b; }
+.profile-ONG { color: #5386e4; }
+
+.profile-description {
+  color: var(--text-color);
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+.profile-card .button-container {
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+/* =================== BOTÕES DE SCROLL (Setas ↓ nos perfis) =================== */
+
+.button-scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: white;
+  text-decoration: none;
+  border-radius: 50%;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 1.5em;
+  line-height: 1;
+  font-family: "Inter", sans-serif;
+  border: 2px solid #262626;
+  box-shadow: 0 3px 0 #262626;
+}
+
+.button-scroll--orange { background-color: #f89737; }
+.button-scroll--orange:hover { background-color: #df9682; box-shadow: 0 0px 0 #262626; }
+
+.button-scroll--pink { background-color: #f12a80; }
+.button-scroll--pink:hover { background-color: #ea92b8; box-shadow: 0 0px 0 #262626; }
+
+.button-scroll--blue { background-color: #2f26e8; }
+.button-scroll--blue:hover { background-color: #765ef2; box-shadow: 0 0px 0 #262626; }
+
+.button-scroll--red { background-color: #fa1111; }
+.button-scroll--red:hover { background-color: #f87676; box-shadow: 0 0px 0 #262626; }
+
+/* ===================================================== */
+/* =================== SEÇÃO HERO (ALUNO) ============= */
+/* ===================================================== */
+#ecological-hero {
+  padding: 6rem 0;
+  background-color: var(--white);
+}
+
+.main-text-hero {
+  flex: 1;
+  padding: 2rem 0;
+  padding-left: 30px;
+  padding-right: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  justify-content: center;
+}
+
+.main-title {
+  font-family: "Inter", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #f89737;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.main-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #262626;
+  text-align: center;
+}
+
+/* Lista de features (missões, desafios, medalhas) */
+.features-list {
+  list-style: none;
+  margin-bottom: 30px;
+  padding-left: 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.1rem;
+  color: #4B4B4B;
+}
+
+.feature-item .icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #e07a5f;
+}
+
+/* Chamada final da seção */
+ .main-text-hero .main-call {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 30px;
+  color: #262626;
+  text-align: center;
+}
+
+/* =================== BOTÃO PARA ENTRAR NA SALA =================== */
+
+.entry-button {
+  color: #000;
+  font-weight: 900;
+  font-family: "BeVietnamPro", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0.9em 1.6em;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  box-shadow: 0 3px 0 #262626;
+  z-index: 1;
+  background-color: #F8BA37;
+}
+
+.entry-button--gooey {
+  color: #262626;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 4px solid #262626;
+  border-radius: 10px;
+  position: relative;
+  transition: all 700ms ease;
+  width: 550px;
+  height: 60px;
+}
+
+.entry-button--gooey .entry-button__blobs {
+  height: 100%;
+  filter: url(#goo);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+}
+
+.entry-button--gooey .entry-button__blobs div {
+  background-color: #262626;
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+
+.entry-button--gooey .entry-button__blobs div:nth-child(1) {
+  left: -5%;
+}
+
+.entry-button--gooey .entry-button__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+
+.entry-button--gooey .entry-button__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+
+.entry-button--gooey:hover {
+  color: #fff;
+  box-shadow: 0 0px 0 #262626;
+}
+
+.entry-button--gooey:hover .entry-button__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
+}
+
+/* ================================================================== */
+/* =================== SEÇÃO PROFESSOR E RESPONSÁVEL ================ */
+/* ================================================================== */
+.unified-section {
+  padding: 0;
+  margin: 0;
+  border: 0px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(246, 246, 246, 1) 0%,
+    rgba(249, 208, 228, 1) 66%
+  );
+}
+
+.home-section {
+  background-color: #ff3a4d;
+  padding: 0;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 900px;
+}
+
+.home-content {
+  width: 100%;
+  height: 500px;
+  margin-top: 90px;
+  padding: 50px;
+  text-align: center;
+}
+
+.image-professor {
+  width: 400px;
+  height: 400px;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 70px;
+}
+
+.image-professor:hover {
+  transform: translateY(-5px);
+}
+
+.home-h3 {
+  font-size: 2rem;
+  margin-top: 30px;
+}
+
+.home-content h3 {
+  color: #ffffff;
+  font-size: 30px;
+  margin-bottom: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+.home-content p {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.hero-section {
+  padding: 0;
+  margin-top: 150px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  width: auto;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  color: #f85199;
+  font-size: 45px;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  color: #9f2258;
+  font-size: 1.2rem;
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+
+.secondary-button {
+  display: inline-block;
+  background-color: white;
+  color: #ff3a4d;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 3px solid #262626;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  box-shadow: 0 3px 0 #262626;
+  margin-top: 55px;
+}
+
+.secondary-button:hover {
+  color: #ffffff;
+  background-color: #ff3a4d;
+   border: 3px solid #262626;
+  transform: translateY(1px);
+  box-shadow: 0 0px 0 #262626;
+}
+
+/* Features para Professores */
+.features-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+}
+
+.feature-box {
+  display: flex;
+  align-items: center;
+  background-color: #f12a80;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  box-shadow: 0px 3px 0px  #262626;
+  border: 3px solid #262626;
+}
+
+.feature-box:hover {
+transform: translateY(-5px);
+box-shadow: 0px 0px 0px  #262626;
+border: 3px solid #262626;
+}
+
+.feature-box-1:hover .icon-img {
+  content: url("/img/index/classicon.gif");
+}
+
+.feature-box-2:hover .icon-img {
+  content: url("/img/index/challengeicon.gif");
+}
+
+.feature-box-3:hover .icon-img {
+  content: url("/img/index/relatoryicon.gif");
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-right: 15px;
+}
+
+.feature-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.feature-text {
+  font-size: 16px;
+  color: white;
+}
+
+.education-footer {
+  color: #9f2258;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  margin: 40px 0;
+  font-size: 20px;
+}
+
+/* Botão CTA da seção professores */
+.cta-button {
+  margin-top: 10px;
+  margin-bottom: 250px;
+  display: inline-flex;
+  justify-content: center;
+  background-color: #f85199;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: "Sora", sans-serif;
+  width: 650px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  box-shadow: 0px 3px 0px  #262626;
+  border: 3px solid #262626;
+}
+
+.cta-button:hover {
+  color: #f85199;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 0px  #262626;
+  border: 2px solid #262626;
+  transition: all 0.3s ease;
+}
+
+/* Divider em forma de onda */
+.wave-divider {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 900px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 130px;
+}
+
+.wave-divider .shape-fill {
+  fill: #ff3a4d;
+}
+
+/* ============================================================== */
+/* =================== SEÇÃO ONG + FOOTER ======================= */
+/* ============================================================== */
+.ong-section {
+  font-family: "InterB";
+  max-width: 1200px;
+  margin: 100px auto 200px auto;
+  padding: 2rem;
+  color: #333;
+}
+
+.ong-header h1 {
+  font-size: 2.5rem;
+  color: #5587e5;
+  margin-bottom: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+.subtitle {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  font-family: "Sora", sans-serif;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  font-family: "Sora", sans-serif;
+}
+
+/* CTA ONG */
+.cta-box {
+  font-family: "Inter";
+  background-color: #5386E4;
+  border: 3px solid #262626;
+  color: #F6F6F6;
+  padding: 1.2rem 2rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 0px #262626;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cta-box:hover {
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* =================== FOOTER =================== */
+
+.green-footer {
+  background-color: #3ab22c;
+  color: white;
+  font-family: "Inter";
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.greencolor {
+  width: 100%;
+  margin-bottom: -8px;
+}
+
+/* Footer CTA */
+.footer-cta {
+  text-align: center;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer-cta h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+}
+
+/* Colunas do Footer */
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-col h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #81c784;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col li {
+  margin-bottom: 0.8rem;
+  color: #c8e6c9;
+  transition: all 0.3s ease;
+}
+
+.footer-col li:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+/* Rodapé Final */
+.footer-bottom {
+  text-align: center;
+  padding: 2rem 0 0;
+  margin-top: 2rem;
+  border-top: 1px solid #81c784;
+}
+
+.footer-bottom h3 {
+  font-style: italic;
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* ===================================================== */
+/* =================== RESPONSIVIDADE ================== */
+/* ===================================================== */
+@media (max-width: 900px) {
+  body {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .main-header {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    height: auto;
+    min-height: 60px;
+    padding: 15px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    border-radius: 20px;
+    min-width: unset;
+    margin: 0;
+  }
+  .main-nav {
+    padding: 0;
+    width: 100%;
+    min-width: unset;
+  }
+
+  .header-content {
+    text-align: center;
+    min-width: 300px;
+  }
+
+  #btn-login {
+    margin-right: 18px;
+  }
+
+  .nav-list {
+    max-width: unset;
+    min-width: unset;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    align-items: center;
+  }
+
+  #login {
+    margin-right: 10px;
+  }
+
+  .main-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-text > p {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15%;
+  }
+
+  .main-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -80%;
+    width: 70%;
+    height: 400px;
+    margin-top: 25%;
+  }
+
+  .main-image > img {
+    position: absolute;
+    width: 100%;
+    min-width: 60%;
+    margin-left: 3%;
+  }
+
+  #img1 {
+    margin-top: -50%;
+    margin-bottom: 50px;
+    margin-right: 35px;
+    height: 250px;
+    width: 250px;
+    position: relative;
+  }
+
+  #img2 {
+    height: 330px;
+    margin-top: 15%;
+    margin-bottom: -10%;
+  }
+
+  .main-section {
+    width: 100%;
+    margin-top: 70%;
+    margin-bottom: -25%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profiles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  #ecological-hero {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .code-entry {
+    height: 200px;
+  }
+
+  .code-title {
+    font-size: medium;
+    text-align: center;
+  }
+
+  .submit-button {
+    margin-top: 10px;
+    width: 600px;
+    height: 80px;
+    font-size: small;
+  }
+
+  .code-input {
+    margin-top: 10px;
+    height: 80px;
+    margin-right: 10px;
+  }
+
+  .education-footer {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--white);
+  }
+
+  #ecological-teacher {
+    border-radius: 0;
+  }
+
+  #ecological-responsible {
+    border-radius: 0;
+    border: none;
+  }
+
+  .ong-section {
+    text-align: center;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-col {
+    margin-bottom: 2rem;
+  }
+}
+
+/* --- Novas Media Queries para Melhor Responsividade --- */
+@media (max-width: 767px) {
+  /* Ajustes para telas muito pequenas (smartphones) */
+
+  /* Header */
+  .nav-list {
+    flex-direction: column;
+    gap: 5px; /* Reduz o espaçamento */
+    padding: 10px;
+    width: 95%; /* Ocupa mais largura em telas pequenas */
+    margin: 0 auto; /* Centraliza */
+  }
+
+  .nav-link,
+  .nav-link-active,
+  .btn-login {
+    width: 100%; /* Links e botões ocupam a largura total */
+    text-align: center;
+    padding: 0.8rem 1rem; /* Ajusta o padding */
+  }
+
+  .greenit-button {
+    width: 50px; /* Mantém o botão da logo menor */
+    height: 50px;
+  }
+
+  /* Main Section */
+  .main-text h1 {
+    font-size: 2.2rem; /* Reduz o tamanho da fonte do título */
+    margin-top: 10%; /* Ajusta margem para evitar sobreposição com imagem */
+  }
+
+  .main-text p {
+    font-size: 1rem; /* Reduz o tamanho da fonte do parágrafo */
+    max-width: 100%;
+    padding: 0 10px; /* Adiciona padding para evitar que o texto encoste nas bordas */
+  }
+
+  .main-buttons {
+    align-items: center; /* Centraliza os botões */
+  }
+
+  .btn {
+    width: 90%; /* Botões ocupam mais largura */
+    min-width: unset;
+  }
+
+  .main-image {
+    top: -50%; /* Traz a imagem mais para cima para ficar visível */
+    margin-top: 15%; /* Ajuste fino da margem */
+    width: 80%; /* Aumenta um pouco a largura da imagem */
+    height: auto; /* Deixa a altura automática */
+  }
+
+  #img1, #img2 {
+    width: 100%; /* Ajusta as imagens individualmente */
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  #img1 {
+    margin-bottom: 20px;
+  }
+
+  .main-section {
+    margin-top: 40%; /* Ajusta o margin-top para acomodar a imagem e o texto */
+    padding: 2rem 0;
+  }
+
+  /* Seção Perfis */
+  .profiles {
+    padding: 2rem 10px; /* Reduz o padding lateral */
+  }
+
+  .profile-grid {
+    flex-direction: column; /* Coloca os cards em coluna */
+    align-items: center; /* Centraliza os cards */
+    gap: 1.5rem;
+  }
+
+  .profile-card {
+    width: 90%; /* Cards ocupam mais largura */
+  }
+
+  /* Seção Hero (Aluno) */
+  .main-title {
+    font-size: 35px; /* Reduz o tamanho do título principal */
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  .main-subtitle {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .feature-item {
+    font-size: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .entry-button--gooey {
+    width: 90%; /* Botão "Entrar na Sala" ocupa mais largura */
+    height: 50px;
+    font-size: 14px;
+    padding: 0.7em 1em;
+  }
+
+  /* Seção Professor e Responsável */
+  .home-section {
+    height: auto; /* Altura automática */
+    padding-bottom: 50px; /* Adiciona um padding no final */
+  }
+
+  .home-content {
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  .image-professor {
+    width: 80%; /* Imagem do professor ocupa mais largura */
+    height: auto;
+  }
+
+  .home-content h3 {
+    font-size: 25px;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+  }
+
+  .hero-section {
+    margin-top: 50px;
+    padding: 0 10px;
+  }
+
+  .hero-section h1 {
+    font-size: 35px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .secondary-button {
+    width: 90%;
+    min-width: unset;
+  }
+
+  .features-container {
+    padding: 0 10px;
+    gap: 20px;
+  }
+
+  .feature-box {
+    flex-direction: column; /* Icone e texto em coluna */
+    text-align: center;
+    padding: 10px;
+  }
+
+  .feature-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .feature-text {
+    font-size: 14px;
+  }
+
+  .cta-button {
+    width: 90%; /* Botão CTA do professor ocupa mais largura */
+    padding: 10px 20px;
+    margin-bottom: 100px;
+  }
+
+  .wave-divider {
+    bottom: 500px; /* Ajusta a posição do wave divider */
+    height: 80px; /* Reduz a altura da onda */
+  }
+  .wave-divider svg {
+    height: 80px;
+  }
+
+
+  /* Seção ONG */
+  .ong-section {
+    margin: 50px auto 100px auto;
+    padding: 1rem;
+  }
+
+  .ong-header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .cta-box {
+    width: 90%;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  /* Footer */
+  .footer-cta h2 {
+    font-size: 1.2rem;
+  }
+
+  .footer-col h3 {
+    font-size: 1rem;
+  }
+
+  .footer-col li {
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Ajustes para tablets e telas maiores que 767px, mas menores que 992px */
+
+  /* Header */
+  .nav-list {
+    flex-wrap: wrap; /* Permite quebrar a linha se necessário */
+    gap: 15px;
+    padding: 10px;
+    width: 90%;
+  }
+
+  .nav-link,
+  .nav-link-active,
+  .btn-login {
+    width: auto; /* Permite que os itens tenham largura natural */
+    flex-grow: 1; /* Crescem para preencher o espaço */
+  }
+
+  /* Main Section */
+  .main-content {
+    flex-direction: column; /* Conteúdo em coluna */
+    text-align: center;
+  }
+
+  .main-text {
+    padding: 1rem 0;
+  }
+
+  .main-text h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .main-text p {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto 2.5rem auto;
+  }
+
+  .main-image {
+    max-width: 70%; /* Imagem um pouco maior */
+    margin-top: 2rem;
+    position: relative; /* Remove absolute para fluxo normal */
+    top: auto;
+    height: auto;
+  }
+
+  #img1, #img2 {
+    position: static; /* Remove absolute para fluxo normal */
+    margin: 0 auto;
+  }
+
+  .main-section {
+    margin-top: 0;
+    padding: 4rem 0;
+  }
+
+  .main-buttons {
+    align-items: center; /* Centraliza os botões */
+  }
+
+  /* Seção Perfis */
+  .profile-grid {
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: center; /* Centraliza os cards */
+  }
+
+  .profile-card {
+    width: 45%; /* Dois cards por linha */
+  }
+
+  /* Seção Hero (Aluno) */
+  .entry-button--gooey {
+    width: 80%; /* Botão maior em tablets */
+  }
+
+  /* Seção Professor e Responsável */
+  .home-content {
+    padding: 30px;
+  }
+
+  .image-professor {
+    width: 60%;
+  }
+
+  .features-container {
+    max-width: 80%;
+  }
+
+  .cta-button {
+    width: 80%;
+  }
+
+  .wave-divider {
+    bottom: 700px; /* Ajusta a posição do wave divider */
+  }
+
+  /* Footer */
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    gap: 1.5rem;
+  }
+
+  .footer-col {
+    text-align: left;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Ajustes para desktops e telas grandes */
+
+  /* Header */
+  .nav-list {
+    width: 100%; /* Pode ajustar conforme necessário */
+    flex-wrap: nowrap;
+    gap: 25px;
+  }
+
+  /* Main Section */
+  .main-content {
+    flex-direction: row; /* Volta ao layout original */
+    text-align: left;
+  }
+
+  .main-text {
+    padding-left: 30px;
+    padding-right: 20px;
+    text-align: left;
+  }
+
+  .main-text h1 {
+    text-align: left;
+  }
+
+  .main-text p {
+    text-align: left;
+  }
+
+  .main-image {
+    max-width: 50%; /* Volta ao tamanho original */
+    position: relative;
+    top: auto;
+    height: auto;
+  }
+
+  #img1, #img2 {
+    position: static;
+    margin: auto;
+  }
+
+  .main-section {
+    margin-top: 0;
+    padding: 6rem 0;
+  }
+
+  .main-buttons {
+    align-items: flex-start; /* Alinha à esquerda */
+  }
+
+  /* Seção Perfis */
+  .profile-grid {
+    flex-direction: row; /* Volta ao layout original de linha */
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .profile-card {
+    width: 300px; /* Tamanho original do card */
+  }
+
+  /* Seção Hero (Aluno) */
+  .entry-button--gooey {
+    width: 550px; /* Volta ao tamanho original */
+  }
+
+  /* Seção Professor e Responsável */
+  .home-content {
+    padding: 50px;
+  }
+
+  .image-professor {
+    width: 400px;
+  }
+
+  .features-container {
+    max-width: 600px;
+  }
+
+  .cta-button {
+    width: 650px;
+  }
+
+  .wave-divider {
+    bottom: 900px; /* Volta à posição original */
+  }
+
+  /* Footer */
+  .footer-columns {
+    grid-template-columns: repeat(3, 1fr); /* Volta a três colunas */
+  }
+
+  .footer-col {
+    text-align: left;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

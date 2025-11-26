@@ -1,0 +1,399 @@
+/* ===================================================== */
+/* =============== DISPOSAL POINTS STYLES ================ */
+/* ===================================================== */
+
+/*
+  Removed global resets, variables, and font imports
+  as they are already defined in style.css.
+  This prevents conflicts and ensures consistency.
+*/
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.borderscreen {
+  display: flex;
+  width: 95%;
+  max-width: 1400px;
+  height: auto;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 15px;
+  border: 2px solid #262626;
+  background: var(--light-bg); /* Uses variable from style.css */
+  margin: 20px auto;
+}
+
+.master {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #3ab22c 0%, #3ab22c 100%);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* ===== SEÇÃO DE PONTOS DE DESCARTE ===== */
+.points-section {
+  display: flex;
+  flex-direction: column-reverse; /* Mapa fica embaixo em mobile */
+  width: 100%;
+  height: auto;
+  gap: 20px;
+  padding: 15px;
+}
+
+.map-container {
+  flex: 1;
+  height: 50vh; /* Usando viewport height para melhor responsividade */
+  min-height: 300px;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow); /* Uses variable from style.css */
+  border: 2px solid #262626;
+  position: relative;
+  background: #f0f0f0; /* Cor de fundo enquanto carrega */
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Correção para evitar problemas de renderização em mobile */
+.leaflet-container {
+  background: #fff !important;
+  overflow: visible !important; /* Adicionado para garantir visibilidade do mapa */
+}
+
+/* Ajuste para controles do mapa em mobile */
+.leaflet-control {
+  z-index: 1000 !important;
+}
+
+/* Garantir que o mapa não tenha overflow escondido */
+.master {
+  overflow: visible !important;
+}
+
+.points-list-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  order: 1;
+}
+
+.points-list {
+  background-color: var(--white); /* Uses variable from style.css */
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: var(--shadow); /* Uses variable from style.css */
+  border: 2px solid #262626;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.search-bar,
+.search-filter {
+  flex: 1;
+}
+
+.search-bar input,
+.search-filter select {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: var(--transition); /* Uses variable from style.css */
+}
+
+.search-bar input:focus,
+.search-filter select:focus {
+  outline: none;
+  border-color: var(--primary-color); /* Uses variable from style.css */
+}
+
+#points {
+  list-style-type: none;
+  padding: 0;
+}
+
+.point-item {
+  background-color: var(--light-bg); /* Uses variable from style.css */
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: var(--transition); /* Uses variable from style.css */
+}
+
+.point-item:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow); /* Uses variable from style.css */
+}
+
+.point-item.active {
+  background-color: var(--primary-color); /* Uses variable from style.css */
+  color: white;
+  border-color: var(--primary-dark); /* Uses variable from style.css */
+}
+
+.point-item.active strong {
+  color: white;
+}
+
+.point-item strong {
+  color: var(--primary-dark); /* Uses variable from style.css */
+  display: block;
+  margin-bottom: 5px;
+  transition: var(--transition); /* Uses variable from style.css */
+}
+
+/* Popup do mapa */
+.leaflet-popup-content {
+  font-family: "Inter"; /* Uses font from style.css */
+  padding: 10px;
+  min-width: 200px;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 10px;
+}
+
+/* Loading do mapa */
+.map-loading {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  color: var(--text-color); /* Uses variable from style.css */
+  font-family: "Inter", sans-serif; /* Uses font from style.css */
+  font-size: 1.2rem;
+}
+
+.spinner {
+  border: 5px solid rgba(46, 204, 113, 0.2);
+  border-radius: 50%;
+  border-top: 5px solid var(--primary-color); /* Uses variable from style.css */
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}
+
+
+/* ===================================================== */
+/* ===================== RODAPÉ ======================== */
+/* ===================================================== */
+
+.bluecolor {
+  /* Mantido, mas provavelmente não faz sentido aqui se for apenas um background transparente */
+  background: var(--white);
+  width: 100%;
+  height: 60%;
+  margin-top: -100px;
+}
+
+.green-footer {
+  margin-top: 6%; /* Mantido para consistência com o arquivo original */
+  background-color: #3ab22c; /* Cor de fundo específica para este arquivo */
+  color: var(--white); /* Usando variável para o texto */
+  font-family: "Inter", sans-serif; /* Font family precisa estar presente se não houver import */
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.footer-cta {
+  text-align: center;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer-cta h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--white); /* Usando variável para o texto */
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-col h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  /* Cor da borda ajustada para um tom de verde claro */
+  border-bottom: 2px solid #81c784; 
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col li {
+  margin-bottom: 0.8rem;
+  /* Cor do texto ajustada para um tom de verde claro */
+  color: #c8e6c9; 
+  transition: var(--transition); /* Usando variável de transição */
+}
+
+.footer-col li:hover {
+  color: var(--white); /* Usando variável para o hover */
+  padding-left: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 2rem 0 0;
+  margin-top: 2rem;
+  /* Cor da borda ajustada para um tom de verde claro */
+  border-top: 1px solid #81c784; 
+}
+
+.footer-bottom h3 {
+  font-style: italic;
+  font-size: 1.8rem;
+  color: var(--white); /* Usando variável para o texto */
+}
+
+
+/* ===== MEDIA QUERIES (APENAS DA SEÇÃO DE PONTOS DE DESCARTE) ===== */
+@media (min-width: 768px) {
+  .search-container {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 992px) {
+  .points-section {
+    flex-direction: row;
+  }
+
+  .map-container {
+    height: 600px;
+    width: 600px;
+    z-index: 1000;
+  }
+
+  .points-list {
+    max-height: 600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .map-container {
+    height: 700px;
+    width: 600px;
+  }
+
+  .points-list {
+    max-height: 700px;
+  }
+}
+
+/* Media Queries para o Rodapé (se necessário, mas o anterior já era bem responsivo) */
+@media (max-width: 900px) {
+  .green-footer {
+    margin-top: 3%; /* Ajuste de margem superior para mobile */
+    padding: 1.5rem 0; /* Diminui o padding vertical */
+  }
+
+  .footer-cta {
+    padding: 1rem; /* Diminui o padding */
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-cta h2 {
+    font-size: 1.3rem; /* Diminui o tamanho da fonte */
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    gap: 1.5rem; /* Diminui o espaçamento */
+    padding: 0 1rem; /* Mantém o padding lateral */
+  }
+
+  .footer-col h3 {
+    font-size: 1.1rem; /* Diminui o tamanho da fonte */
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+  }
+
+  .footer-col li {
+    font-size: 0.9rem; /* Diminui o tamanho da fonte */
+  }
+
+  .footer-bottom {
+    padding: 1.5rem 0 0; /* Diminui o padding */
+    margin-top: 1.5rem;
+  }
+
+  .footer-bottom h3 {
+    font-size: 1.5rem; /* Diminui o tamanho da fonte */
+  }
+}
+
+@media (max-width: 480px) {
+  .green-footer {
+    margin-top: 2%;
+    padding: 1rem 0;
+  }
+
+  .footer-cta h2 {
+    font-size: 1.1rem;
+  }
+
+  .footer-col h3 {
+    font-size: 1rem;
+  }
+
+  .footer-col li {
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom h3 {
+    font-size: 1.2rem;
+  }
+}

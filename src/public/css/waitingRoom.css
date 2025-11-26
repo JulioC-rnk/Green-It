@@ -1,0 +1,367 @@
+/*Fontes*/
+/* Fonte Inter */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap");
+
+/* Fonte be vietnam pro */
+
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap");
+
+/* Fonte sora */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
+/* Reset e estilos base */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* deixar centralizado e fundo com animação */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2fbe7;
+  background: #f89737;
+  background: linear-gradient(
+    135deg,
+    #f89737 25%,
+    #f8ba37 25%,
+    #f8ba37 50%,
+    #f89737 50%,
+    #f89737 75%,
+    #f8ba37 75%,
+    #f8ba37
+  );
+  background-size: 40px 40px;
+
+  /* Animação */
+  animation: move 4s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+/* container principal */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  color: #000;
+  background-color: #e7e7e7;
+  padding: 35px;
+  border: 2px solid #000;
+  border-radius: 12px;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 3px 0 black;
+  align-items: center;
+  font-weight: 800px;
+  position: relative;
+  width: 30%;
+}
+
+/* ============ Lista de jogadores ===========  */
+
+#listaJogadores {
+  list-style: none;
+  padding: 0;
+}
+
+.player {
+  padding: 10px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+li img {
+  flex-direction: row;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  margin-bottom: 15px;
+}
+
+p {
+  font-family: "Be Vietnam Pro";
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin-bottom: 15px;
+  font-family: "Be Vietnam Pro";
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  color: #000;
+  background-color: #ffffff;
+  border: 2px solid #000;
+  border-radius: 0.5rem;
+  transition: transform 0.2s, background-color 0.2s;
+  margin-bottom: 10px;
+  padding: 0 30px;
+}
+
+/* ================ botão voltar =================  */
+
+.botao-voltar {
+  margin-top: 1rem;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Be Vietnam Pro";
+  background-color: #f8ba37;
+  color: #8d3310;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: 2px solid #262626;
+}
+
+.botao-voltar:hover {
+  color: #bd853b;
+  transform: scale(1.03);
+  background-color: #f5cf7d;
+  box-shadow: 0px 4px 0px #262626;
+}
+
+/* ================================================ */
+
+/* ================== terra girando =====================*/
+
+.earth {
+  justify-content: center;
+  display: flex;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.earth-loader {
+  justify-content: center;
+  --watercolor: #3344c1;
+  --landcolor: #7cc133;
+  width: 7.5em;
+  height: 7.5em;
+  background-color: var(--watercolor);
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: inset 0em 0.5em rgb(255, 255, 255, 0.25),
+    inset 0em -0.5em rgb(0, 0, 0, 0.25);
+  border: solid 0.15em white;
+  animation: startround 1s;
+  animation-iteration-count: 1;
+}
+
+.earth p {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.25em;
+  font-size: 1.25em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.earth-loader svg:nth-child(1) {
+  position: absolute;
+  bottom: -2em;
+  width: 7em;
+  height: auto;
+  animation: round1 5s infinite linear 0.75s;
+}
+
+.earth-loader svg:nth-child(2) {
+  position: absolute;
+  top: -3em;
+  width: 7em;
+  height: auto;
+  animation: round1 5s infinite linear;
+}
+.earth-loader svg:nth-child(3) {
+  position: absolute;
+  top: -2.5em;
+  width: 7em;
+  height: auto;
+  animation: round2 5s infinite linear;
+}
+.earth-loader svg:nth-child(4) {
+  position: absolute;
+  bottom: -2.2em;
+  width: 7em;
+  height: auto;
+  animation: round2 5s infinite linear 0.75s;
+}
+
+@keyframes startround {
+  0% {
+    filter: brightness(500%);
+    box-shadow: none;
+  }
+  75% {
+    filter: brightness(500%);
+    box-shadow: none;
+  }
+  100% {
+    filter: brightness(100%);
+    box-shadow: inset 0em 0.5em rgb(255, 255, 255, 0.25),
+      inset 0em -0.5em rgb(0, 0, 0, 0.25);
+  }
+}
+
+@keyframes round1 {
+  0% {
+    left: -2em;
+    opacity: 100%;
+    transform: skewX(0deg) rotate(0deg);
+  }
+  30% {
+    left: -6em;
+    opacity: 100%;
+    transform: skewX(-25deg) rotate(25deg);
+  }
+  31% {
+    left: -6em;
+    opacity: 0%;
+    transform: skewX(-25deg) rotate(25deg);
+  }
+  35% {
+    left: 7em;
+    opacity: 0%;
+    transform: skewX(25deg) rotate(-25deg);
+  }
+  45% {
+    left: 7em;
+    opacity: 100%;
+    transform: skewX(25deg) rotate(-25deg);
+  }
+  100% {
+    left: -2em;
+    opacity: 100%;
+    transform: skewX(0deg) rotate(0deg);
+  }
+}
+
+@keyframes round2 {
+  0% {
+    left: 5em;
+    opacity: 100%;
+    transform: skewX(0deg) rotate(0deg);
+  }
+  75% {
+    left: -7em;
+    opacity: 100%;
+    transform: skewX(-25deg) rotate(25deg);
+  }
+  76% {
+    left: -7em;
+    opacity: 0%;
+    transform: skewX(-25deg) rotate(25deg);
+  }
+  77% {
+    left: 8em;
+    opacity: 0%;
+    transform: skewX(25deg) rotate(-25deg);
+  }
+  80% {
+    left: 8em;
+    opacity: 100%;
+    transform: skewX(25deg) rotate(-25deg);
+  }
+  100% {
+    left: 5em;
+    opacity: 100%;
+    transform: skewX(0deg) rotate(0deg);
+  }
+}
+
+/* ========= Responsividade =============== */
+
+@media (max-width: 1024px) {
+  .container {
+    width: 60%;
+    padding: 25px;
+  }
+
+  li {
+    padding: 0 80px;
+  }
+
+  li img {
+    right: 80px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  li img {
+    position: static;
+    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .player {
+    font-size: 16px;
+    gap: 6px;
+  }
+
+  .earth {
+    margin-bottom: 10px;
+    transform: scale(0.85);
+  }
+
+  h2,
+  h3,
+  p {
+    text-align: center;
+    font-size: 1rem;
+  }
+}

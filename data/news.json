@@ -1,0 +1,44 @@
+{
+  "lastnews": [
+    {
+      "title": "Brasil é o 5º país que mais gera lixo eletrônico, mas apenas 3% é descartado corretamente; saiba como fazer",
+      "description": "Para se desfazer de um eletroeletrônico quebrado, a orientação é procurar o Ponto de Entrega Voluntária (PEV) mais próximo",
+      "link": "https://www.brasildefato.com.br/2024/12/26/brasil-e-5-pais-que-mais-gera-lixo-eletronico-mas-so-3-e-descartado-corretamente-saiba-como-fazer/",
+      "image": "/img/articles/n1.svg"
+    },
+    {
+      "title": "Tecnologia verde: um caminho rumo a sustentabilidade!",
+      "description": "Práticas de sustentabilidade podem otimizar o ciclo de vida dos produtos de forma responsável, além de gerar menor impacto ambiental",
+      "link": "https://itforum.com.br/colunas/tecnologia-verde-sustentabilidade/",
+      "image": "/img/articles/n2.svg"
+    },
+    {
+      "title": "Projeto escolar brasileiro sobre lixo eletrônico vence o 3º Prêmio Ibero-Americano de Inovação Educacional.",
+      "description": "A Escola Municipal Ernesto Milani, de Quatro Barras, no estado do Paraná, ganhou o primeiro lugar. Também foram reconhecidos projetos de destaque da Argentina, do Chile e do Peru!",
+      "link": "https://oei.int/pt/escritorios/secretaria-geral/noticia/projeto-de-conscientizacao-sobre-lixo-eletronico-de-uma-escola-brasileira-ganha-o-iii-premio-ibero-americano-de-inovacao-educacional/",
+      "image": "/img/articles/n3.svg"
+    }
+  ],
+  "trendingnews": [
+    {
+      "title": "IMD recebe exposição sobre lixo eletrônico e sustentabilidade!",
+      "link": "https://www.ufrn.br/imprensa/noticias/88470/imd-recebe-exposicao-sobre-lixo-eletronico-e-sustentabilidade",
+      "image": "/img/articles/tn1.svg"
+    },
+    {
+      "title": "Os pilares da sustentabilidade focam em soluções para a gestão do lixo eletrônico.",
+      "link": "https://www.jornaldeuberaba.com.br/noticia/94123/pilares-da-sustentabilidade-focam-em-solucoes-na-gestao-do-lixo-eletronico",
+      "image": "/img/articles/tn2.svg"
+    },
+    {
+      "title": "Tecnologias para um futuro sustentável que vão transformar o Brasil!",
+      "link": "https://www.computerweekly.com/br/reportagen/Tecnologias-para-um-futuro-sustentavel-que-vao-transformar-o-Brasil",
+      "image": "/img/articles/tn3.svg"
+    },
+    {
+      "title": "As 5 empresas de TI que mais apostam em soluções verdes.",
+      "link": "https://exame.com/mundo/as-5-empresas-de-ti-que-mais-apostam-em-solucoes-verdes/",
+      "image": "/img/articles/tn4.svg"
+    }
+  ]
+}

@@ -1,0 +1,1070 @@
+/* =================== FONTES =================== */
+
+/* Fonte Inter */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap");
+
+/* Fonte be vietnam pro */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap");
+
+/* Fonte sora */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
+
+/* ===================================================== */
+/* =============== RESET E VARIÁVEIS =================== */
+/* ===================================================== */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis Globais */
+:root {
+  /* Cores */
+  --primary-color: #2ecc71;
+  --primary-dark: #27ae60;
+  --secondary-color: #3498db;
+  --text-color: #2c3e50;
+  --light-bg: #f8f9fa;
+  --white: #ffffff;
+
+  /* Efeitos */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--white);
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+/* ===================================================== */
+/* =================== HEADER ========================== */
+/* ===================================================== */
+.main-header {
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Container da Header */
+.container-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =================== NAVEGAÇÃO =================== */
+
+.main-nav {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 0 10px;
+  border: 2px solid #262626;
+  border-radius: 16px;
+  background-color: var(--white);
+}
+
+/* =================== LINKS DA NAV =================== */
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-link,
+.nav-link-active {
+  font-family: "InterB", sans-serif;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  width: 200px;
+  height: 45px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border-radius: 0.9em;
+}
+
+.nav-link {
+  font-weight: 600;
+  background-color: #4caf50;
+  color: white;
+  border: 3px solid #0e7d70;
+  box-shadow: 0 4px 0 #0e7d70;
+}
+
+.nav-link:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 0px 0 #0e7d70;
+}
+
+.nav-link-active {
+  border: 3px solid #4b4b4b;
+  background-color: #e7e7e7;
+  color: black;
+}
+
+/* =================== BOTÃO LOGIN =================== */
+
+.btn-login {
+  background: linear-gradient(to right, #81d916, #3ab22c);
+  font-family: "InterB", sans-serif;
+  font-weight: 600;
+  color: white;
+  padding: 0.35em 1.2em 0.35em 1.2em;
+  font-size: 14px;
+  border-radius: 0.9em;
+  border: 3px solid #0e7d70;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 0 #0e7d70;
+  overflow: hidden;
+  position: relative;
+  height: 45px;
+  width: 200px;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.btn-login .icon {
+  background: #f6f6f6;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 40px;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #059a5a;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.btn-login:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.btn-login .icon svg {
+  width: 1.1em;
+  color: #0e7d70;
+  transition: transform 0.3s;
+}
+
+.btn-login :active .icon {
+  transform: scale(0.95);
+}
+
+/* =================== BOTÃO GREEN IT (Logo Redondo) =================== */
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.greenit-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #0e7d70;
+  border-radius: 12px;
+  background-color: #e7e7e7;
+  box-shadow: 0px 4px 0px #0e7d70;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.greenit-button::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -150%;
+  width: 300%;
+  height: 300%;
+  border-radius: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 1;
+  background: linear-gradient(to right, #81d916, #3ab22c);
+}
+
+.greenit-button.claude::before {
+  background-color: #059a5a;
+}
+
+.greenit-button:hover::before {
+  transform: translateX(-50%) scale(1);
+}
+
+.greenit-button:hover {
+  transform: translate(-0px, -0px);
+  box-shadow: 0px 0px 0px #000000;
+}
+
+.greenit-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #000000;
+}
+
+/* Logo dentro do botão */
+.greenit-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  fill: #ffffff;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Animação da logo ao hover */
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.greenit-button:hover .greenit-logo {
+  animation: spin 5s linear infinite;
+  width: 1px;
+  height: 1px;
+  top: 28%;
+}
+
+.button-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  z-index: 2;
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.button-text span:first-child {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.button-text span:last-child {
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+}
+
+.greenit-button:hover .button-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Conteúdo principal */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+   background-color: #f2fbe7;
+  background: #E7E7E7;
+  background: linear-gradient(
+    135deg,
+    #E7E7E7 25%,
+    #F6F6F6 25%,
+    #F6F6F6 50%,
+    #E7E7E7 50%,
+    #E7E7E7 75%,
+    #F6F6F6 75%,
+    #F6F6F6
+  );
+  background-size: 40px 40px;
+
+  /* Animação */
+  animation: move 4s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+.container {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 8rem auto;
+  padding: 40px;
+  height: 800px;
+  width: 60%;
+  display: flex;
+}
+
+/* Decoração da configuração da sala */
+
+#configuracaoSala {
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #262626;
+  box-shadow: 0px 4px 0px #262626;
+  padding: 15px;
+  border-radius: 12px;
+  background: linear-gradient(-45deg, #ff2036, #f12a80, #f89737, #9e0077);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Título configurar sala */
+
+.container h1 {
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 900px;
+  color: #262626;
+  font-size: 25px;
+}
+
+/* div com os itens em que o usuário irá entregar dados */
+
+.itensConfiguracao {
+  border-radius: 12px;
+  padding: 30px;
+  margin: 1rem auto;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Select custom do tema */
+
+.select {
+  margin-bottom: 15px;
+}
+
+#category-select label {
+  font-size: 1rem;
+  letter-spacing: 0.0225rem;
+}
+
+#select-button {
+  margin-top: 0.5rem;
+  display: flex;
+  padding: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 3px 0 #262626;
+  border-radius: 0.375rem;
+  border: 2px solid #262626;
+  background-color: #f6f6f6;
+}
+
+label {
+  font-family: "Inter";
+  font-weight: 700;
+}
+
+#selected-value {
+  color: #262626;
+  font-size: 1rem;
+  letter-spacing: 0.0225rem;
+}
+
+#chevrons svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#chevrons {
+  color: #262626;
+}
+
+#chevrons [data-lucide="chevron-up"] {
+  display: none;
+}
+
+#options-view-button:focus + #select-button,
+#options-view-button:checked + #selected-button {
+  box-shadow: 0px 0px 0 #262626;
+}
+
+#category-select:has(#options-view-button:checked) label,
+#options-view-button:checked + #select-button #chevrons {
+  color: #3ab22c;
+}
+
+#options-view-button:checked
+  + #select-button
+  #chevrons
+  [data-lucide="chevron-down"] {
+  display: none;
+}
+
+#options-view-button:checked
+  + #select-button
+  #chevrons
+  [data-lucide="chevron-up"] {
+  display: block;
+}
+
+#category-select {
+  position: relative;
+}
+
+#options-view-button {
+  all: unset;
+
+  position: absolute;
+  inset: 0;
+
+  cursor: pointer;
+  z-index: 3;
+}
+
+#options {
+  margin-top: 0.25rem;
+
+  border-radius: 0.375rem;
+  border: 2px solid #262626;
+  background: #f6f6f6;
+
+  display: none;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.75rem;
+
+  font-size: 0.85rem;
+  color: #262626;
+  width: 100%;
+  border-bottom: 1px solid #262626;
+
+  position: relative;
+}
+
+.option .label {
+  color: #262626;
+}
+
+.option svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.option svg:last-child {
+  margin-left: auto;
+  color: #3ab22c;
+  display: none;
+}
+
+.option:has(input:checked),
+.option:hover {
+  border-bottom: 1px solid #262626;
+  background-color: #b6b6b6;
+}
+
+.option:has(input:focus) {
+  outline: 1px solid #3ab22c;
+}
+
+.option:has(input:checked) [data-lucide="check"] {
+  display: block;
+}
+
+.option input[type="radio"] {
+  all: unset;
+
+  position: absolute;
+  inset: 0;
+
+  cursor: pointer;
+}
+
+.option:nth-child(1) {
+  color: #3146cf;
+}
+
+.option:nth-child(2) {
+  color: #059a5a;
+}
+
+#category-select:has(#options-view-button:checked) + #options {
+  display: block;
+}
+
+.select:has(.option input:checked) #category-select label {
+  color: #3ab22c;
+}
+
+.select:has(.option input:checked) #selected-value {
+  color: #262626;
+}
+
+/* select custom de dificuldade */
+
+#dificuldade-select label {
+  font-size: 1rem;
+  letter-spacing: 0.0225rem;
+}
+
+#dificuldade-button {
+  margin-top: 0.5rem;
+  display: flex;
+  padding: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 0.375rem;
+  border: 2px solid #262626;
+  box-shadow: 0px 3px 0 #262626;
+  background-color: #f6f6f6;
+}
+
+#dificuldade-value {
+  color: #262626;
+  font-size: 1rem;
+  letter-spacing: 0.0225rem;
+}
+
+#dificuldade-chevrons svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#dificuldade-chevrons {
+  color: #262626;
+}
+
+#dificuldade-chevrons [data-lucide="chevron-up"] {
+  display: none;
+}
+
+#dificuldade-toggle:focus + #dificuldade-button,
+#dificuldade-toggle:checked + #selected-button {
+  box-shadow: 0px 0px 0 #262626;
+}
+
+#dificuldade-select:has(#dificuldade-toggle:checked) label,
+#dificuldade-toggle:checked + #dificuldade-button #dificuldade-chevrons {
+  color: #3ab22c;
+}
+
+#dificuldade-toggle:checked
+  + #dificuldade-button
+  #dificuldade-chevrons
+  [data-lucide="chevron-down"] {
+  display: none;
+}
+
+#dificuldade-toggle:checked
+  + #dificuldade-button
+  #dificuldade-chevrons
+  [data-lucide="chevron-up"] {
+  display: block;
+}
+
+#dificuldade-select {
+  position: relative;
+}
+
+#dificuldade-toggle {
+  all: unset;
+
+  position: absolute;
+  inset: 0;
+
+  cursor: pointer;
+  z-index: 3;
+}
+
+#options-dificuldade {
+  margin-top: 0.25rem;
+
+  border-radius: 0.375rem;
+  border: 2px solid #262626;
+  background: #f6f6f6;
+
+  display: none;
+}
+
+.option-dificuldade {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.75rem;
+
+  font-size: 0.85rem;
+  color: #262626;
+  width: 100%;
+  border-bottom: 2px solid #262626;
+
+  position: relative;
+}
+
+.option-dificuldade .label {
+  color: #262626;
+}
+
+.option-dificuldade svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.option-dificuldade svg:last-child {
+  margin-left: auto;
+  color: #3ab22c;
+  display: none;
+}
+
+.option-dificuldade:has(input:checked),
+.option-dificuldade:hover {
+  border-bottom: 1px solid #262626;
+  background-color: #b6b6b6;
+}
+
+.option-dificuldade:has(input:focus) {
+  outline: 1px solid #3ab22c;
+}
+
+.option-dificuldade:has(input:checked) [data-lucide="check"] {
+  display: block;
+}
+
+.option-dificuldade input[type="radio"] {
+  all: unset;
+
+  position: absolute;
+  inset: 0;
+
+  cursor: pointer;
+}
+
+.option-dificuldade:nth-child(1) {
+  color: #3146cf;
+}
+
+.option-dificuldade:nth-child(2) {
+  color: #059a5a;
+}
+
+#dificuldade-select:has(#dificuldade-toggle:checked) + #options-dificuldade {
+  display: block;
+}
+
+.select:has(.option-dificuldade input:checked) #dificuldade-select label {
+  color: #3ab22c;
+}
+
+.select:has(.option-dificuldade input:checked) #dificuldade-value {
+  color: #262626;
+}
+
+/* Input de tempo */
+
+label {
+  margin-bottom: 10px;
+}
+
+#tempo {
+  font-family: "Sora", sans-serif;
+  color: #262626;
+  padding: 0.75rem;
+
+  margin-bottom: 15px;
+  border-radius: 0.375rem;
+  border: 2px solid #262626;
+  box-shadow: 0px 3px 0 #262626;
+  background-color: #f6f6f6;
+}
+
+#tempo:focus {
+  box-shadow: 0px 0px 0 #262626;
+}
+
+/*Botão de criar sala*/
+.create-button {
+  font-family: 'Sora', sans-serif;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0.9em 1.6em;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  box-shadow: 0 3px 0 #262626;
+  z-index: 1;
+}
+
+.create-button--gooey {
+  color: #262626;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid #262626;
+  border-radius: 12px;
+  position: relative;
+  transition: all 700ms ease;
+  height: 50px;
+}
+
+.create-button--gooey .create-button__blobs {
+  height: 100%;
+  filter: url(#goo);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+}
+
+.create-button--gooey .create-button__blobs div {
+  background-color: #262626;
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+
+.create-button--gooey .create-button__blobs div:nth-child(1) {
+  left: -5%;
+}
+
+.create-button--gooey .create-button__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+
+.create-button--gooey .create-button__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+
+.create-button--gooey:hover {
+  color: #fff;
+  box-shadow: 0 0px 0 #262626;
+}
+
+.create-button--gooey:hover .create-button__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
+}
+
+/* Estilização do painel de administrador */
+
+#painelAdmin {
+  padding: 40px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  box-shadow: 0px 4px 0px black;
+  padding: 15px;
+  border-radius: 12px;
+  background: linear-gradient(-45deg, #ff2036, #f12a80, #f89737, #ff3a4d);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Lista de jogadores */
+
+#lista-jogadores,
+#listaGerenciarJogadores {
+  list-style: none;
+  padding: 0;
+}
+
+/* ====== Botões finalizar partida, iniciar e pular pergunta ======== */
+
+#finalizarPartida {
+  margin: 2rem 0;
+  font-family: 'Sora', sans-serif;
+  background-color: #ff2036;
+  font-weight: 500;
+  color: #f0dfe5;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: 1px solid #262626;
+  box-shadow: 0px 2px 0px #262626;
+}
+
+#finalizarPartida:hover {
+  color: #262626;
+  transform: scale(1.03);
+  background-color: #f77885;
+}
+
+#iniciar:disabled {
+  margin: 2rem 0;
+  font-family: 'Sora';
+  background-color: #dbbe7f;
+  font-weight: 500;
+  color: #555555;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: not-allowed;
+  transition: transform 0.2s ease;
+  border: 1px solid #555555;
+  box-shadow: 0px 2px 0px #555555;
+}
+
+#iniciar {
+  margin: 2rem 0;
+  font-family: 'Sora', sans-serif;
+  background-color: #f8ba37;
+  font-weight: 500;
+  color: #262626;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: 1px solid #262626;
+  box-shadow: 0px 2px 0px #262626;
+}
+
+#iniciar:hover {
+  transform: scale(1.03);
+  background-color: #f5cf7d;
+}
+
+#painelAdmin li button {
+  margin: 5px 0px;
+  font-family: 'Sora', sans-serif;
+  background-color: #ff2036;
+  font-weight: 500;
+  color: #f0dfe5;
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: 1px solid #262626;
+  box-shadow: 0px 2px 0px #262626;
+}
+
+#painelAdmin li button:hover {
+  color: #262626;
+  transform: scale(1.03);
+  background-color: #f77885;
+}
+
+#pular {
+  margin: 2rem 0;
+  font-family: 'Sora', sans-serif;
+  background-color: #5386e4;
+  font-weight: 500;
+  color: #262626;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: 1px solid #262626;
+  box-shadow: 0px 2px 0px #262626;
+}
+
+#pular:hover {
+  transform: scale(1.03);
+  background-color: #8aaef0;
+}
+
+#btnVoltar {
+  margin-top: 1.5rem;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Be Vietnam Pro";
+  background-color: #e7e7e7;
+  color: #262626;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: 2px solid #262626;
+  box-shadow: 0px 2px 0px #262626;
+}
+
+#btnVoltar:hover {
+  font-weight: 800;
+  color: #3b3b3b;
+  transform: scale(1.03);
+  background-color: #b4b4b4;
+  box-shadow: 0px 4px 0px #262626;
+}
+
+/*-------------------------------------*/
+
+/* ===== Container da lista de jogadores =======  */
+
+.jogadoresConectados {
+  color: #262626;
+  background-color: #e7e7e7;
+  padding: 15px;
+  border: 2px solid #262626;
+  border-radius: 12px;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 3px 0 #262626;
+  margin-bottom: 2rem;
+}
+
+.jogadoresConectados li {
+  border-radius: 6px 6px 0px 0px;
+  background-color: #e7e7e7;
+  border-bottom: 2px solid #262626;
+}
+
+.jogadoresConectados li img {
+  position: relative;
+  right: 50px;
+  top: 10px;
+}
+
+.gerenciarJogadores {
+  color: #262626;
+  background-color: #e7e7e7;
+  padding: 15px;
+  border: 2px solid #262626;
+  border-radius: 12px;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 3px 0 #262626;
+  margin-bottom: 2rem;
+}
+
+/* --------------------------------------- */
+
+/* Adicione ao final do seu enterRoom.css */
+body {
+  padding-top: 10px; /* ajuste este valor conforme a altura do seu header */
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 120px; /* ajuste para mobile se necessário */
+  }
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: #fff; /* ou a cor de fundo do seu header */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  height: 100px; /* ajuste para a altura real do seu header */
+}
+
+body {
+  padding-top: 100px; /* igual à altura do header */
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: #fff; /* ou a cor do seu header */
+  height: 140px; /* ajuste para a altura real do header */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  padding-top: 20px; /* mesmo valor do height do header */
+}

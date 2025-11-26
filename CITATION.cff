@@ -1,0 +1,60 @@
+cff-version: 1.2.0
+title: Web Application GreenIT
+message: >-
+  Repositório padrão para o Eixo 1 - Projeto 1: Aplicações
+  Web da PUC Minas.
+type: software
+authors:
+  - given-names: Ana Beatriz
+    family-names: Coura
+    email: abcoura@sga.pucminas.br
+    affiliation: PUC Minas
+  - given-names: Lucas Vinicius
+    family-names: Lima Fernandes
+    email: lucas.fernandes.1587521@sga.pucminas.br
+    affiliation: PUC Minas
+  - given-names: Júlio César
+    family-names: de Oliveira Junior
+    email: jcojunior@sga.pucminas.br
+    affiliation: PUC Minas
+  - given-names: Cicero Guilherme
+    family-names: Gonzaga Silvestre
+    email: cggsilvestre@sga.pucminas.br
+    affiliation: PUC Minas
+repository-code: >-
+  https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t1-greenit
+abstract: >-
+  O projeto visa enfrentar o crescente problema do lixo
+  eletrônico, cujo descarte inadequado libera substâncias
+  tóxicas que contaminam o meio ambiente e colocam em risco
+  a saúde pública. Para isso, foi desenvolvida uma
+  plataforma digital interativa com foco na educação e
+  conscientização sobre a importância da coleta seletiva e
+  do descarte responsável desses resíduos.
+
+
+  Voltada especialmente para crianças e adolescentes em
+  idade escolar, a plataforma também apoia educadores,
+  escolas, ONGs e famílias interessadas em promover a
+  educação ambiental. Por meio de atividades lúdicas e
+  interativas, busca-se ensinar os impactos do lixo
+  eletrônico e incentivar hábitos sustentáveis desde cedo,
+  contribuindo para a formação de uma geração mais
+  consciente e comprometida com o futuro do planeta.
+keywords:
+  - Desenvolvimento Web
+  - HTML
+  - CSS
+  - JavaScript
+  - Node
+  - express
+  - json-server
+  - socket.io
+  - Saúde pública
+  - Futuro do planeta
+  - Geração consciente
+  - Educação ambiental
+  - Plataforma digital interativa
+commit: 1864e4778de71987b214d59dbb275895692974d3
+version: Final
+date-released: '2025-06-22'
